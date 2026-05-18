@@ -1,0 +1,161 @@
+[
+  {
+    "query": "How does the system handle peak load?",
+    "strategy_a": {
+      "strategy": "A - Raw Vector Search",
+      "original_query": "How does the system handle peak load?",
+      "expanded_query": "How does the system handle peak load?",
+      "top_chunks": [
+        {
+          "rank": 1,
+          "doc_id": 0,
+          "score": 0.6127,
+          "text_snippet": "The system employs a multi-tier load balancer using consistent hashing to distribute incoming HTTP traffic across a pool of stateless application servers. Durin..."
+        },
+        {
+          "rank": 2,
+          "doc_id": 1,
+          "score": 0.4986,
+          "text_snippet": "Horizontal autoscaling is triggered when average CPU utilization exceeds 70% across the server fleet for more than 2 consecutive minutes. The autoscaling policy..."
+        },
+        {
+          "rank": 3,
+          "doc_id": 3,
+          "score": 0.3722,
+          "text_snippet": "The system uses event-driven architecture with Apache Kafka as the message broker. During high throughput scenarios, producers batch messages to reduce round-tr..."
+        }
+      ]
+    },
+    "strategy_b": {
+      "strategy": "B - AI-Enhanced Retrieval",
+      "original_query": "How does the system handle peak load?",
+      "expanded_query": "Describe the autoscaling policies, load balancing algorithms, and traffic management strategies used during high-traffic events and peak load conditions, including horizontal scaling, request queuing, circuit breaker activation, and Kafka consumer group rebalancing.",
+      "top_chunks": [
+        {
+          "rank": 1,
+          "doc_id": 1,
+          "score": 0.6742,
+          "text_snippet": "Horizontal autoscaling is triggered when average CPU utilization exceeds 70% across the server fleet for more than 2 consecutive minutes. The autoscaling policy..."
+        },
+        {
+          "rank": 2,
+          "doc_id": 0,
+          "score": 0.6273,
+          "text_snippet": "The system employs a multi-tier load balancer using consistent hashing to distribute incoming HTTP traffic across a pool of stateless application servers. Durin..."
+        },
+        {
+          "rank": 3,
+          "doc_id": 3,
+          "score": 0.6236,
+          "text_snippet": "The system uses event-driven architecture with Apache Kafka as the message broker. During high throughput scenarios, producers batch messages to reduce round-tr..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "What caching mechanisms are used to improve performance?",
+    "strategy_a": {
+      "strategy": "A - Raw Vector Search",
+      "original_query": "What caching mechanisms are used to improve performance?",
+      "expanded_query": "What caching mechanisms are used to improve performance?",
+      "top_chunks": [
+        {
+          "rank": 1,
+          "doc_id": 2,
+          "score": 0.5167,
+          "text_snippet": "A distributed Redis cluster is deployed as the primary caching layer, storing session tokens, frequently accessed API responses, and computed aggregations with ..."
+        },
+        {
+          "rank": 2,
+          "doc_id": 3,
+          "score": 0.393,
+          "text_snippet": "The system uses event-driven architecture with Apache Kafka as the message broker. During high throughput scenarios, producers batch messages to reduce round-tr..."
+        },
+        {
+          "rank": 3,
+          "doc_id": 8,
+          "score": 0.3849,
+          "text_snippet": "Database read replicas are provisioned across three availability zones to support read-heavy workloads without impacting primary write throughput. Replication l..."
+        }
+      ]
+    },
+    "strategy_b": {
+      "strategy": "B - AI-Enhanced Retrieval",
+      "original_query": "What caching mechanisms are used to improve performance?",
+      "expanded_query": "Explain the distributed caching strategies including Redis TTL configuration, write-through cache invalidation, in-memory cache layers, and how caching reduces PostgreSQL pressure and improves response latency for frequently accessed API responses and session tokens.",
+      "top_chunks": [
+        {
+          "rank": 1,
+          "doc_id": 2,
+          "score": 0.8655,
+          "text_snippet": "A distributed Redis cluster is deployed as the primary caching layer, storing session tokens, frequently accessed API responses, and computed aggregations with ..."
+        },
+        {
+          "rank": 2,
+          "doc_id": 8,
+          "score": 0.501,
+          "text_snippet": "Database read replicas are provisioned across three availability zones to support read-heavy workloads without impacting primary write throughput. Replication l..."
+        },
+        {
+          "rank": 3,
+          "doc_id": 3,
+          "score": 0.4557,
+          "text_snippet": "The system uses event-driven architecture with Apache Kafka as the message broker. During high throughput scenarios, producers batch messages to reduce round-tr..."
+        }
+      ]
+    }
+  },
+  {
+    "query": "How is data consistency maintained across distributed nodes?",
+    "strategy_a": {
+      "strategy": "A - Raw Vector Search",
+      "original_query": "How is data consistency maintained across distributed nodes?",
+      "expanded_query": "How is data consistency maintained across distributed nodes?",
+      "top_chunks": [
+        {
+          "rank": 1,
+          "doc_id": 4,
+          "score": 0.673,
+          "text_snippet": "Data consistency across distributed nodes is enforced through a two-phase commit (2PC) protocol for critical financial transactions. For non-critical data paths..."
+        },
+        {
+          "rank": 2,
+          "doc_id": 8,
+          "score": 0.5483,
+          "text_snippet": "Database read replicas are provisioned across three availability zones to support read-heavy workloads without impacting primary write throughput. Replication l..."
+        },
+        {
+          "rank": 3,
+          "doc_id": 2,
+          "score": 0.4828,
+          "text_snippet": "A distributed Redis cluster is deployed as the primary caching layer, storing session tokens, frequently accessed API responses, and computed aggregations with ..."
+        }
+      ]
+    },
+    "strategy_b": {
+      "strategy": "B - AI-Enhanced Retrieval",
+      "original_query": "How is data consistency maintained across distributed nodes?",
+      "expanded_query": "Describe the consistency models (eventual consistency, strong consistency via 2PC), distributed transaction strategies, vector clock conflict resolution, database read replica replication lag handling, and last-write-wins approaches across distributed nodes.",
+      "top_chunks": [
+        {
+          "rank": 1,
+          "doc_id": 4,
+          "score": 0.7532,
+          "text_snippet": "Data consistency across distributed nodes is enforced through a two-phase commit (2PC) protocol for critical financial transactions. For non-critical data paths..."
+        },
+        {
+          "rank": 2,
+          "doc_id": 8,
+          "score": 0.661,
+          "text_snippet": "Database read replicas are provisioned across three availability zones to support read-heavy workloads without impacting primary write throughput. Replication l..."
+        },
+        {
+          "rank": 3,
+          "doc_id": 2,
+          "score": 0.4884,
+          "text_snippet": "A distributed Redis cluster is deployed as the primary caching layer, storing session tokens, frequently accessed API responses, and computed aggregations with ..."
+        }
+      ]
+    }
+  }
+]
